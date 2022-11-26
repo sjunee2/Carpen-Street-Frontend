@@ -1,8 +1,10 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
 import counter from "@redux/slices/counter";
 
-const rootReducer = combineReducers({ counter });
+import todos from "@redux/slices/todo";
+
+const rootReducer = combineReducers({ counter, todos });
 
 export type RootState = ReturnType<typeof rootReducer>;
 

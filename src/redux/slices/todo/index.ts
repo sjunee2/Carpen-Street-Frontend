@@ -26,12 +26,16 @@ export const todoSlice = createSlice({
     },
     removeTodo: (state, action: PayloadAction<number>) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
-    }
-    ,
+    },
     completeTodo: (state, action: PayloadAction<number>) => {
       const index = state.todos.findIndex((todo) => todo.id === action.payload);
       state.todos[index].completed = !state.todos[index].completed;
     },
+    editTodo: (state, action: PayloadAction<Todo>) => {
+      const index = state.todos.findIndex((todo) => todo.id === action.payload.id);
+      state.todos[index].text = action.payload.text;
+      state.todos[index].date = action.payload.date;
+    }
   },
 });
 
