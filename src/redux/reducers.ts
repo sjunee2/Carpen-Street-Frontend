@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import counter from "@redux/slices/counter";
+import date from "@redux/slices/date";
 
 import todos from "@redux/slices/todo";
 
-const rootReducer = combineReducers({ counter, todos });
+const rootReducer = combineReducers({ date , todos });
 
 export type RootState = ReturnType<typeof rootReducer>;
 
