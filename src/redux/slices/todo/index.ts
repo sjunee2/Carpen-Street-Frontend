@@ -7,6 +7,11 @@ interface Todo{
   completed: boolean;
 }
 
+interface AddTodo{
+  text: string;
+  date: Date;
+}
+
 const initialState = {
   todos: [] as Todo[],
 };
@@ -15,7 +20,7 @@ export const todoSlice = createSlice({
   name: "todos",
   initialState,
   reducers: {
-    addTodo: (state, action: PayloadAction<Todo>) => {
+    addTodo: (state, action: PayloadAction<AddTodo>) => {
       const todo = {
         id: Math.random(),
         text: action.payload.text,

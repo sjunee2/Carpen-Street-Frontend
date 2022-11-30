@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface Date{
+interface NumberedDate{
   year: number;
   month: number;
   day: number;
@@ -8,9 +8,9 @@ interface Date{
 
 const currentDate = new Date();
 
-const initialState: Date = {
+const initialState: NumberedDate = {
   year: currentDate.getFullYear(),
-  month: currentDate.getMonth() + 1,
+  month: currentDate.getMonth(),
   day: currentDate.getDate(),
 };
 
@@ -32,3 +32,4 @@ export const dateSlice = createSlice({
 
 export const { changeDay, changeMonth, changeYear } = dateSlice.actions;
 export default dateSlice.reducer;
+export type { NumberedDate };
