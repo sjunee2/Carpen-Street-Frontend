@@ -13,8 +13,6 @@ export const Calendar: React.FC = () => {
   const firstDayOfMonth = new Date(date.year, date.month, 1);
   const lastDayOfMonth = new Date(date.year, date.month + 1, 0);
   const previousMonthLastDay = new Date(date.year, date.month, 0);
-  const nextMonthFirstDay = new Date(date.year, date.month + 1, 1);
-  const daysOfTheWeek = [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" ];
 
   const renderPreviousMonth = () => {
     const result = [];
