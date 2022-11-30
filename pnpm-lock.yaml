@@ -6,11 +6,13 @@ specifiers:
   '@types/react': ^17.0.0
   '@types/react-dom': ^17.0.0
   '@types/react-redux': ^7.1.16
+  '@types/styled-components': ^5.1.26
   babel-plugin-styled-components: ^1.12.0
   next: ^12.1.6
   next-compose-plugins: ^2.2.1
   react: 17.0.2
   react-dom: 17.0.2
+  react-icons: ^4.7.1
   react-redux: ^7.2.4
   redux: ^4.2.0
   styled-components: ^5.2.1
@@ -19,10 +21,12 @@ specifiers:
 
 dependencies:
   '@reduxjs/toolkit': 1.9.0_csuupx2mfbspdz76fkecdgkise
+  '@types/styled-components': 5.1.26
   next: 12.3.4_sfoxds7t5ydpegc3knd667wn6m
   next-compose-plugins: 2.2.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-icons: 4.7.1_react@17.0.2
   react-redux: 7.2.9_sfoxds7t5ydpegc3knd667wn6m
   redux: 4.2.0
   styled-components: 5.3.6_sfoxds7t5ydpegc3knd667wn6m
@@ -448,6 +452,14 @@ packages:
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
 
+  /@types/styled-components/5.1.26:
+    resolution: {integrity: sha512-KuKJ9Z6xb93uJiIyxo/+ksS7yLjS1KzG6iv5i78dhVg/X3u5t1H7juRWqVmodIdz6wGVaIApo1u01kmFRdJHVw==}
+    dependencies:
+      '@types/hoist-non-react-statics': 3.3.1
+      '@types/react': 17.0.52
+      csstype: 3.1.1
+    dev: false
+
   /ansi-styles/3.2.1:
     resolution: {integrity: sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==}
     engines: {node: '>=4'}
@@ -650,6 +662,14 @@ packages:
       object-assign: 4.1.1
       react: 17.0.2
       scheduler: 0.20.2
+
+  /react-icons/4.7.1_react@17.0.2:
+    resolution: {integrity: sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 17.0.2
+    dev: false
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
