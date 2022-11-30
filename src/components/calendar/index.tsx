@@ -16,7 +16,7 @@ export const Calendar: React.FC = () => {
   const nextMonthFirstDay = new Date(date.year, date.month + 1, 1);
   const daysOfTheWeek = [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" ];
 
-  const previousMonthRender = () => {
+  const renderPreviousMonth = () => {
     const result = [];
     for (let i = 0; i < firstDayOfMonth.getDay(); i++) {
       result.unshift(
@@ -26,7 +26,7 @@ export const Calendar: React.FC = () => {
     return result;
   };
 
-  const currentMonthRender = () => {
+  const renderCurrentMonth = () => {
     const result = [];
     for (let i = 0; i < lastDayOfMonth.getDate(); i++) {
       result.push(
@@ -36,7 +36,7 @@ export const Calendar: React.FC = () => {
     return result;
   };
 
-  const nextMonthRender = () => {
+  const renderNextMonth = () => {
     const result = []
     for (let i = 0; i < 6 - lastDayOfMonth.getDay(); i++) {
       result.push(
@@ -51,9 +51,9 @@ export const Calendar: React.FC = () => {
     <Container>
       <Header />
       <DaysOfTheWeek />
-      {previousMonthRender()}
-      {currentMonthRender()}
-      {nextMonthRender()}
+      {renderPreviousMonth()}
+      {renderCurrentMonth()}
+      {renderNextMonth()}
     </Container>
   )
 };
