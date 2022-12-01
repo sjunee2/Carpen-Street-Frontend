@@ -20,6 +20,9 @@
     pnpm start
 ```
 
+### 로컬 주소
+port: 3000
+
 ## 사용툴
 Next.js, Redux toolkit, Styled-components, TypeScript
 
