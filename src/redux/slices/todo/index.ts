@@ -7,6 +7,12 @@ interface Todo{
   completed: boolean;
 }
 
+interface EditTodo{
+  id: number;
+  text: string;
+  date: Date;
+}
+
 interface AddTodo{
   text: string;
   date: Date;
@@ -36,7 +42,7 @@ export const todoSlice = createSlice({
       const index = state.todos.findIndex((todo) => todo.id === action.payload);
       state.todos[index].completed = !state.todos[index].completed;
     },
-    editTodo: (state, action: PayloadAction<Todo>) => {
+    editTodo: (state, action: PayloadAction<EditTodo>) => {
       const index = state.todos.findIndex((todo) => todo.id === action.payload.id);
       state.todos[index].text = action.payload.text;
       state.todos[index].date = action.payload.date;
@@ -44,5 +50,5 @@ export const todoSlice = createSlice({
   },
 });
 
-export const { addTodo, removeTodo, completeTodo } = todoSlice.actions;
+export const { addTodo, removeTodo, completeTodo, editTodo } = todoSlice.actions;
 export default todoSlice.reducer;

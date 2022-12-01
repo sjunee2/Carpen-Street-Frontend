@@ -12,6 +12,7 @@ export const YearWrapper = styled.div`
   display: flex;
   font-size: 1.3rem;
   color: #737373;
+  justify-content: center;
 `
 
 export const MonthWrapper = styled.div`
