@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useAppDispatch } from "@redux/store";
 import { RootState } from "@redux/reducers";
-import { Logo, Toggle } from "@components";
 import { Wrapper, Container, MonthWrapper, YearWrapper } from "./styled";
 import { Button } from "@components";
 import { changeMonth, changeYear } from "@redux/actions";
@@ -33,7 +32,7 @@ export const Header: React.FC = () => {
         <YearWrapper>
           {date.year}
         </YearWrapper>
-        
+
         <MonthWrapper>
           <Button onClick={(e) => handlePreviousMonth(e) }>
             <AiFillCaretLeft />
